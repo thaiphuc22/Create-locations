@@ -1,0 +1,58 @@
+.react-multi-email {
+    background: #fff;
+    margin: 0 0 4px;
+    max-width: 100%;
+    flex: 1 0 auto;
+    outline: 0;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    text-align: left;
+    line-height: 1.21428571em;
+    padding: 12px;
+    min-height: 72px;
+    border: 1px solid #A2A9B0;
+    border-radius: 8px;
+    transition: box-shadow 0.1s ease, border-color 0.1s ease;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+.react-multi-email .data-labels{flex-wrap: wrap}
+.react-multi-email > span[data-placeholder] {display: none;padding: 5px;}
+.react-multi-email.focused {border-color: #85b7d9;background: #fff;}
+.react-multi-email.empty > span[data-placeholder] {display: inline;color: #ccc;}
+.react-multi-email.focused > span[data-placeholder] {display: none;}
+
+.react-multi-email > input {
+    flex: 1 1;
+    width: auto !important;
+    outline: none !important;
+    border: 0 none !important;
+    display: inline-block !important;
+    vertical-align: baseline !important;
+    padding: 7px !important;
+}
+
+.react-multi-email [data-tag] {
+    background-color: #F2F2F2;
+    font-size: 14px;
+    line-height: 16px;
+    vertical-align: baseline;
+    margin: 0 8px 8px 0;
+    background-image: none;
+    padding: 8px;
+    color: #878D96;
+    text-transform: none;
+    border: 0 solid transparent;
+    border-radius: 0.28571429rem;
+    transition: background 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+.react-multi-email [data-tag] [data-tag-item] {max-width: 100%;overflow: hidden;}
+.react-multi-email [data-tag]:first-child {margin-left: 0;}
+.react-multi-email [data-tag] [data-tag-handle] {margin-left: 8px;cursor: pointer;}
