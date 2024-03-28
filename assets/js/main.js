@@ -79,7 +79,7 @@ document.getElementById("select-item-ship4p").addEventListener("click", function
   placeShippingMethod.style.display = "none"; 
 });
 
-//handeld dropdown list Market
+//handle dropdown list Market
 document.getElementById("market_list").style.display = "none";
 
 document.getElementById("select_market").addEventListener("click", function() {
@@ -105,3 +105,20 @@ document.getElementById("vietnam-market").addEventListener("click", function() {
   placeMarket.style.display = "none"; 
 });
 
+
+
+
+// handle Manage POS
+document.getElementById("manage_POS").style.display = "none";
+
+// when activePOS change
+var checkbox = document.getElementById("active_POS");
+checkbox.addEventListener("change", function() {
+  var managePOS = document.getElementById("manage_POS");
+  
+  if (checkbox.checked) {
+    managePOS.style.display = "block"; 
+  } else {
+    managePOS.style.display = "none"; 
+  }
+});
