@@ -91,3 +91,17 @@ document.getElementById("select_market").addEventListener("click", function() {
     }
    
   });
+
+
+  // handle selected item
+document.getElementById("market_list").style.display = "none";
+document.getElementById("vietnam-market-selected").style.display = "none";
+
+document.getElementById("vietnam-market").addEventListener("click", function() {
+  var selectedMarket = document.getElementById("vietnam-market-selected");
+  var placeMarket = document.getElementById("place_market");
+  
+  selectedMarket.style.display = "flex"; 
+  placeMarket.style.display = "none"; 
+});
+
