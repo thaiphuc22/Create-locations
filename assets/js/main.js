@@ -1,71 +1,32 @@
-// Function to handle the change event of Transhipment Point checkbox
-function handleTranshipmentPointChange(checkbox) {
-    var localDeliveryCheckbox = document.querySelector('input[name="isLocalDelivery"]');
-    var carrierSettingSection = document.getElementById('carrier-setting-section');
+// Function handle section Carrier Setting display
 
-    if (checkbox.checked) {
-        localDeliveryCheckbox.checked = true;
-        localDeliveryCheckbox.disabled = true;
-        carrierSettingSection.style.display = 'block'; // Hiển thị phần tử Carrier Setting
-    } else {
-        localDeliveryCheckbox.disabled = false;
-        localDeliveryCheckbox.checked = false;
-        carrierSettingSection.style.display = 'none'; // Ẩn phần tử Carrier Setting
-    }
+// document.getElementById('carrier-setting-section').style.display = "none";
+// var transhipmentCheckbox = document.querySelector('input[name="isTranshipmentPoint"]');
+// var localDeliveryCheckbox = document.querySelector('input[name="isLocalDelivery"]');
 
-    handleCarrierSettingVisibility(localDeliveryCheckbox, carrierSettingSection);
-}
+// function handleCheckboxChange()  {
+//   var carrierSettingSection = document.getElementById('carrier-setting-section');
+  
+// if (transhipmentCheckbox.checked || localDeliveryCheckbox.checked ) {
+//   carrierSettingSection.style.display = "block"
+// } else {
+//   carrierSettingSection.style.display = "none"
+// }
+// };
 
-// Function to handle the change event of Local Delivery checkbox
-function handleLocalDeliveryChange(checkbox) {
-    var transhipmentCheckbox = document.querySelector('input[name="isTranshipmentPoint"]');
-    var carrierSettingSection = document.getElementById('carrier-setting-section');
-
-    if (!checkbox.checked) {
-        transhipmentCheckbox.disabled = false;
-    }
-
-    handleCarrierSettingVisibility(checkbox, carrierSettingSection);
-}
+// transhipmentCheckbox.addEventListener("change", handleCheckboxChange);
+// localDeliveryCheckbox.addEventListener("change", handleCheckboxChange);
 
 
-//  Function to handle visibility of Carrier Setting section
-function handleCarrierSettingVisibility(checkbox, section) {
-    if (checkbox.checked) {
-        section.style.display = 'block';
-    } else {
-        section.style.display = 'none';
-    }
-}
-
-// Add event listeners to checkboxes
-var transhipmentCheckbox = document.querySelector('input[name="isTranshipmentPoint"]');
-transhipmentCheckbox.addEventListener('change', function() {
-    handleTranshipmentPointChange(this);
-});
-
-var localDeliveryCheckbox = document.querySelector('input[name="isLocalDelivery"]');
-localDeliveryCheckbox.addEventListener('change', function() {
-    handleLocalDeliveryChange(this);
-});
-
-// Call handleCarrierSettingVisibility function to initialize visibility of Carrier Setting section
-var carrierSettingSection = document.getElementById('carrier-setting-section')
-handleCarrierSettingVisibility(localDeliveryCheckbox, carrierSettingSection);
-
-
-//handeld dropdown list Shiping method
-document.getElementById("select-shiping-methods").addEventListener("click", function() {
-    var dropList = document.getElementById("drop-list-shipping-method");
-    if (dropList.style.display === "none" || dropList.style.display === "") {
-      dropList.style.display = "block";
-    } else {
-      dropList.style.display = "none";
-    }
-  });
-
-
-
+// //Fucntion handle dropdown list Shiping method
+// document.getElementById("select-shiping-methods").addEventListener("click", function() {
+//     var dropList = document.getElementById("drop-list-shipping-method");
+//     if (dropList.style.display === "none" || dropList.style.display === "") {
+//       dropList.style.display = "block";
+//     } else {
+//       dropList.style.display = "none";
+//     }
+//   });
 
 // handle selected item
 document.getElementById("drop-list-shipping-method").style.display = "none";
