@@ -29,16 +29,16 @@
 //   });
 
 // handle selected item
-document.getElementById("drop-list-shipping-method").style.display = "none";
-document.getElementById("selected_method").style.display = "none";
+// document.getElementById("drop-list-shipping-method").style.display = "none";
+// document.getElementById("selected_method").style.display = "none";
 
-document.getElementById("select-item-ship4p").addEventListener("click", function() {
-  var selectedMethod = document.getElementById("selected_method");
-  var placeShippingMethod = document.getElementById("place_shipping_method");
+// document.getElementById("select-item-ship4p").addEventListener("click", function() {
+//   var selectedMethod = document.getElementById("selected_method");
+//   var placeShippingMethod = document.getElementById("place_shipping_method");
   
-  selectedMethod.style.display = "block"; 
-  placeShippingMethod.style.display = "none"; 
-});
+//   selectedMethod.style.display = "block"; 
+//   placeShippingMethod.style.display = "none"; 
+// });
 
 //handle dropdown list Market
 document.getElementById("market_list").style.display = "none";
